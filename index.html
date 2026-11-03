@@ -1520,11 +1520,11 @@ section.sec.dark .stbl td,section.sec.dark .oeet td{color:var(--n700)}
     <p class="src">Fuentes 1, 2, 3, 6 y 8. El mapa es cualitativo: ordena actores y tramos declarados en fuentes públicas y registros aduaneros. La ubicación de cada punto es aproximada a nivel ciudad, los arcos indican sentido y no ruta real, y los lugares mostrados son los que aparecen en registros y perfiles públicos, no la totalidad de los que opera la compañía.</p>
   </div>
 
-  <div class="blk-h one"><span class="k">Aritmética del reto principal</span><h3>Cuánto vale el expediente, <em>en horas y en pesos</em></h3><p>Mueve los embarques al mes, las toneladas por embarque, las horas que cuesta cerrar el expediente de un lote, el costo de esa hora, la proporción de embarques que salen antes de tenerlo completo y el diferencial que paga un comprador por carga acreditada. El simulador no promete un ahorro: dimensiona el tamaño de la pregunta. Los valores iniciales son ilustrativos y no provienen de la compañía.</p></div>
+  <div class="blk-h one"><span class="k">Aritmética del reto principal</span><h3>Cuánto vale el expediente, <em>en horas y en pesos</em></h3><p>Mueve los embarques al mes, las toneladas por embarque, las horas que cuesta cerrar el expediente de un lote, el costo de esa hora, la proporción de embarques que salen antes de tenerlo completo y el diferencial en dólares que paga un comprador por carga acreditada. Los tres resultados se expresan en pesos mexicanos. El simulador no promete un ahorro: dimensiona el tamaño de la pregunta. Los valores iniciales son ilustrativos y no provienen de la compañía.</p></div>
   <div class="jst mt24">
-    <div class="j1"><span class="lab">Diferencial total en juego al año</span><b class="num" id="k1">—</b><em id="k1s">—</em></div>
-    <div class="j2"><span class="lab">Costo anual del trabajo documental</span><b class="num" id="k2">—</b><em id="k2s">—</em></div>
-    <div class="j3"><span class="lab">Diferencial que viaja sin expediente cerrado</span><b class="num" id="k3">—</b><em id="k3s">—</em></div>
+    <div class="j1"><span class="lab">Diferencial total en juego al año · MXN</span><b class="num" id="k1">—</b><em id="k1s">—</em></div>
+    <div class="j2"><span class="lab">Costo anual del trabajo documental · MXN</span><b class="num" id="k2">—</b><em id="k2s">—</em></div>
+    <div class="j3"><span class="lab">Diferencial que viaja sin expediente cerrado · MXN</span><b class="num" id="k3">—</b><em id="k3s">—</em></div>
   </div>
   <div class="sim" style="margin-top:16px">
     <div class="sim-g">
@@ -1538,24 +1538,24 @@ section.sec.dark .stbl td,section.sec.dark .oeet td{color:var(--n700)}
         <div class="ctl"><label for="q3">Horas para cerrar el expediente de un lote <span id="q3v" class="num">6</span></label>
           <input type="range" id="q3" min="1" max="24" step="1" value="6">
           <div class="hint">Tiempo de la persona que reúne autodeclaración de origen, análisis, documento de transporte, certificado sanitario donde aplique y el registro de balance de masa.</div></div>
-        <div class="ctl"><label for="q4">Costo cargado de esa hora <span id="q4v" class="num">$350</span></label>
+        <div class="ctl"><label for="q4">Costo cargado de esa hora, en pesos <span id="q4v" class="num">$350</span></label>
           <input type="range" id="q4" min="100" max="900" step="25" value="350">
           <div class="hint">Sueldo más prestaciones y cuotas patronales, dividido entre las horas efectivas del mes. No incluye el tiempo de la dirección cuando hay que escalar un faltante.</div></div>
         <div class="ctl"><label for="q5">Embarques que salen antes de tener el expediente completo <span id="q5v" class="num">30%</span></label>
           <input type="range" id="q5" min="0" max="100" step="5" value="30">
           <div class="hint">Proporción de operaciones en las que el documento se cierra después de que la carga salió. Es el dato que el prediagnóstico mide sobre una muestra real.</div></div>
-        <div class="ctl"><label for="q6">Diferencial por tonelada acreditada <span id="q6v" class="num">USD 40</span></label>
+        <div class="ctl"><label for="q6">Diferencial por tonelada acreditada, en dólares <span id="q6v" class="num">USD 40</span></label>
           <input type="range" id="q6" min="0" max="200" step="5" value="40">
           <div class="hint">Lo que un comprador paga de más por materia prima cuyo origen puede acreditar, porque de eso depende el incentivo que él cobra. Se convierte a pesos al tipo de cambio que elijas.</div></div>
-        <div class="ctl"><label for="q7">Tipo de cambio <span id="q7v" class="num">$18.50</span></label>
+        <div class="ctl"><label for="q7">Tipo de cambio, pesos por dólar <span id="q7v" class="num">$18.50</span></label>
           <input type="range" id="q7" min="15" max="25" step="0.25" value="18.5">
-          <div class="hint">Pesos por dólar.</div></div>
+          <div class="hint">Todas las cifras de resultado se presentan en pesos mexicanos. El único dato que se captura en dólares es el diferencial por tonelada, porque así se negocia con el comprador.</div></div>
         <div class="bars">
-          <div class="barrow"><div class="bl"><span>Diferencial total en juego al año</span><span id="b1t" class="num">—</span></div><div class="bt"><div class="bf" id="b1" style="width:0;background:var(--lime)"></div></div></div>
-          <div class="barrow"><div class="bl"><span>Diferencial que viaja sin expediente cerrado</span><span id="b2t" class="num">—</span></div><div class="bt"><div class="bf" id="b2" style="width:0;background:#C98A1F"></div></div></div>
-          <div class="barrow"><div class="bl"><span>Costo anual del trabajo documental</span><span id="b3t" class="num">—</span></div><div class="bt"><div class="bf" id="b3" style="width:0;background:var(--green-500)"></div></div></div>
+          <div class="barrow"><div class="bl"><span>Diferencial total en juego al año · MXN</span><span id="b1t" class="num">—</span></div><div class="bt"><div class="bf" id="b1" style="width:0;background:var(--lime)"></div></div></div>
+          <div class="barrow"><div class="bl"><span>Diferencial que viaja sin expediente cerrado · MXN</span><span id="b2t" class="num">—</span></div><div class="bt"><div class="bf" id="b2" style="width:0;background:#C98A1F"></div></div></div>
+          <div class="barrow"><div class="bl"><span>Costo anual del trabajo documental · MXN</span><span id="b3t" class="num">—</span></div><div class="bt"><div class="bf" id="b3" style="width:0;background:var(--green-500)"></div></div></div>
         </div>
-        <p class="note" style="margin-top:16px">Aritmética simple, sin supuestos ocultos: el diferencial total es embarques por toneladas por diferencial por tipo de cambio; el expuesto aplica el porcentaje; el costo documental es embarques por horas por costo de la hora. No incorpora el tiempo de la dirección, las auditorías, los reprocesos ni el costo de una carga rechazada. Sirve para dimensionar el orden de magnitud de la pregunta, no para presupuestar. Fuentes 6, 7 y 11.</p>
+        <p class="note" style="margin-top:16px">Aritmética simple, sin supuestos ocultos: el diferencial total es embarques por toneladas por diferencial en dólares por tipo de cambio, en pesos mexicanos; el expuesto aplica el porcentaje; el costo documental es embarques por horas por costo de la hora. No incorpora el tiempo de la dirección, las auditorías, los reprocesos ni el costo de una carga rechazada. Sirve para dimensionar el orden de magnitud de la pregunta, no para presupuestar. Fuentes 6, 7 y 11.</p>
       </div>
       <div class="sl">
         <div class="eyebrow">Cómo se lee esta cifra</div>
@@ -2294,9 +2294,11 @@ function initCorr(){
 
 /* ============ 05 · simulador del expediente ============ */
 function mxn(v){
-  if(v>=1e6) return "$"+(v/1e6).toFixed(v/1e6<10?2:1)+" M";
-  if(v>=1e3) return "$"+Math.round(v/1e3)+" k";
-  return "$"+Math.round(v);
+  var n;
+  if(v>=1e6) n="$"+(v/1e6).toFixed(v/1e6<10?2:1)+" M";
+  else if(v>=1e3) n="$"+Math.round(v/1e3)+" k";
+  else n="$"+Math.round(v);
+  return n+" MXN";
 }
 function initSim(){
   var ids=["q1","q2","q3","q4","q5","q6","q7"], E={};
@@ -2307,20 +2309,20 @@ function initSim(){
     el("q1v").textContent=emb;
     el("q2v").textContent=ton;
     el("q3v").textContent=hrs;
-    el("q4v").textContent="$"+ch.toLocaleString("es-MX");
+    el("q4v").textContent="$"+ch.toLocaleString("es-MX")+" MXN";
     el("q5v").textContent=pct+"%";
     el("q6v").textContent="USD "+dif;
-    el("q7v").textContent="$"+fx.toFixed(2);
+    el("q7v").textContent="$"+fx.toFixed(2)+" MXN";
     var año=emb*12;
     var total=año*ton*dif*fx;
     var expuesto=total*pct/100;
     var costo=año*hrs*ch;
     el("k1").textContent=mxn(total);
-    el("k1s").textContent=año.toLocaleString("es-MX")+" embarques al año por "+ton+" toneladas, a USD "+dif+" por tonelada";
+    el("k1s").textContent=año.toLocaleString("es-MX")+" embarques al año por "+ton+" toneladas, a USD "+dif+" por tonelada, convertido a $"+fx.toFixed(2)+" MXN por dólar";
     el("k2").textContent=mxn(costo);
-    el("k2s").textContent=(año*hrs).toLocaleString("es-MX")+" horas al año de trabajo documental";
+    el("k2s").textContent=(año*hrs).toLocaleString("es-MX")+" horas al año de trabajo documental, valuadas en pesos mexicanos";
     el("k3").textContent=mxn(expuesto);
-    el("k3s").textContent=pct+"% de los embarques sale antes de cerrar su expediente";
+    el("k3s").textContent=pct+"% de los embarques sale antes de cerrar su expediente. Cifra en pesos mexicanos";
     var max=Math.max(total,expuesto,costo,1);
     el("b1").style.width=(total/max*100)+"%"; el("b1t").textContent=mxn(total);
     el("b2").style.width=(expuesto/max*100)+"%"; el("b2t").textContent=mxn(expuesto);
